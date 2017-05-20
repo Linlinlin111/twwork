@@ -2,7 +2,7 @@ public class BowlingGame {
 
     public int getBowlingScore(String bowlingCode) {
         	// String str="X|X|X|X|X|X|X|X|X|X||XX";
-	    	str=bowlingCode;
+	    	String str=bowlingCode;
 		str = str.replaceAll("-", "0");
 		if (str.endsWith("||")) {
 			str += "0";
