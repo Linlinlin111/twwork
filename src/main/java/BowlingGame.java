@@ -1,18 +1,8 @@
-package main.java;
-import java.util.Scanner;
-
 public class BowlingGame {
-	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in);
-		while (input.hasNext()) {
-			String str = input.nextLine();
-			System.out.println(getBowlingScore(str));
-		}
-		input.close();
-	}
 
-	public static int getBowlingScore(String str) {
-		// String str="X|X|X|X|X|X|X|X|X|X||XX";
+    public int getBowlingScore(String bowlingCode) {
+        	// String str="X|X|X|X|X|X|X|X|X|X||XX";
+	    	str=bowlingCode;
 		str = str.replaceAll("-", "0");
 		if (str.endsWith("||")) {
 			str += "0";
@@ -67,6 +57,5 @@ public class BowlingGame {
 			}
 		}
 		return score;
-	}
-
+    }
 }
